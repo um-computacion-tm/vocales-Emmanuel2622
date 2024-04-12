@@ -4,8 +4,8 @@ from Vocales import cont_vocales
 class TestVocales(unittest.TestCase):
 
     def test_1(self):
-        result = cont_vocales("aloA")
-        self.assertEqual(result, {'o':1, 'a':2})
+        result = cont_vocales("árbol")
+        self.assertEqual(result, {'o':1, 'a':1})
 
     def test_2(self):
         result = cont_vocales("esdrújula")
@@ -13,8 +13,8 @@ class TestVocales(unittest.TestCase):
     
 
     def test_3(self):
-        result = cont_vocales("josé come")
-        self.assertEqual(result,{'e':2, 'o':2})
+        result = cont_vocales("jose cAntó")
+        self.assertEqual(result,{'e':1, 'o':2, 'a':1})
     
 
     def test_4(self):
@@ -23,18 +23,18 @@ class TestVocales(unittest.TestCase):
 
     
     def test_5(self):
-        result = cont_vocales("comEr")
-        self.assertEqual(result,{'e':1, 'o':1,})
+        result = cont_vocales("Público")
+        self.assertEqual(result,{'u':1, 'o':1, 'i':1})
     
 
     def test_6(self):
-        result = cont_vocales("binario")
-        self.assertEqual(result,{'i':2, 'a':1, 'o':1})
+        result = cont_vocales("fácil")
+        self.assertEqual(result,{'i':1, 'a':1})
     
 
     def test_7(self):
-        result = cont_vocales("universidad")
-        self.assertEqual(result,{'u':1, 'i':2, 'e':1, 'a':1})
+        result = cont_vocales("niño")
+        self.assertEqual(result,{'i':1, 'o':1})
 
     
     def test_8(self):
